@@ -1,0 +1,18 @@
+valoresPositivos = 0
+        valoresNegativos = 0
+
+        print("Ingrese varios valores enteros (ingrese 0 para terminar):")
+
+        while True:
+        valor = int(input())
+
+        if valor == 0:
+        break
+        elif valor > 0:
+        valoresPositivos += 1
+        else:
+        valoresNegativos += 1
+
+        print("Histograma:")
+        print("Valores positivos: " + "*" * valoresPositivos)
+        print("Valores negativos: " + "*" * valoresNegativos)

@@ -1,0 +1,32 @@
+# Crear una lista para almacenar los números ingresados
+numeros = []
+
+# Solicitar números ordenados al usuario
+while True:
+    entrada = input("Ingrese un número ordenado (ingrese '.' para terminar): ")
+
+    if entrada == '.':
+        break
+
+    try:
+        numero = float(entrada)
+        numeros.append(numero)
+    except ValueError:
+        print("Entrada no válida. Ingrese un número o '.' para terminar.")
+
+# Calcular la mediana
+cantidad_numeros = len(numeros)
+
+if cantidad_numeros == 0:
+    print("No se ingresaron números.")
+else:
+    if cantidad_numeros % 2 == 1:  # Cantidad de números impar
+        mediana = numeros[cantidad_numeros // 2]
+        print(f"La mediana es: {mediana}")
+    else:  # Cantidad de números par
+        indice_mediana1 = (cantidad_numeros - 1) // 2
+        indice_mediana2 = cantidad_numeros // 2
+        numero1 = numeros[indice_mediana1]
+        numero2 = numeros[indice_mediana2]
+        mediana = (numero1 + numero2) / 2.0
+        print(f"La mediana es: {mediana}")

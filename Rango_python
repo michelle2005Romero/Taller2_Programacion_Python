@@ -1,0 +1,20 @@
+# Pedir al usuario la cantidad de datos
+cantidad_datos = int(input("Ingrese la cantidad de datos: "))
+
+# Inicializar variables para el valor máximo y mínimo
+maximo = float('-inf')  # Inicializar con un valor negativo infinito
+minimo = float('inf')   # Inicializar con un valor positivo infinito
+
+# Pedir al usuario ingresar los datos uno por uno y encontrar el máximo y mínimo
+for i in range(cantidad_datos):
+    dato = float(input(f"Ingrese el dato #{i + 1}: "))
+
+    # Actualizar el máximo y mínimo si es necesario
+    if dato > maximo:
+        maximo = dato
+    if dato < minimo:
+        minimo = dato
+
+# Calcular y mostrar el rango
+rango = maximo - minimo
+print(f"El rango de los datos es: {rango}")
